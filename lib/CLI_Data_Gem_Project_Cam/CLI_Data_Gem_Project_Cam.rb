@@ -1,5 +1,7 @@
-class CLI_Data_Gem_Project_Cam::CLI_Data_Gem_Project_Cam
-    attr_accessor 
-    def initialize
+module CLI_Data_Gem_Project_Cam
+    class CLI_Data_Gem_Project_Cam
+        attr_accessor 
+        def initialize
+        end
     end
-  end
+end 

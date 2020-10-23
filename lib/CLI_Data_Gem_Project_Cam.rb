@@ -6,6 +6,8 @@ require_relative "CLI_Data_Gem_Project_Cam/version"
 
 require 'pry'
 require 'httparty'
+require 'nokogiri'
+require 'json'
 
 
 
