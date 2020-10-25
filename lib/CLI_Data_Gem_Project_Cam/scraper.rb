@@ -9,10 +9,12 @@ module CLI_Data_Gem_Project_Cam
         def fetch_data
         url = "https://kitsu.io/api/edge/anime?filter[categories]=#{@genre}"
         response = HTTParty.get(url)
-        response.parsed_response  #might not be needed 
-        binding.pry
-        anime_list = response["main"][]
+        # response.parsed_response  #might not be needed 
+        
+        anime_list = response["data"][0]["attributes"]["canonicalTitle"]
+        
+       
         end
-
+        
     end
 end 

@@ -20,8 +20,13 @@ module CLI_Data_Gem_Project_Cam
         until input = "action" || "adventure" || "comedy" || "Drama" || "Slice of Life" || "Fantasy" || "Magic" || "Supernatural" || "Horror" || "Mystery" || "Psychological" || "Romance" || "Sci-Fi"
             puts "Please enter a valid genre"
             input = gets.strip.to_i
+            end
+            input
         end
-        input
+
+        def print_list
+          
         end
+        
   end
 end 
