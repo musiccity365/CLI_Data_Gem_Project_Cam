@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["clone18476"]
   spec.email         = ["cameroncousins18@gmail.com"]
 
-  spec.summary       ="My Anime Finder gem."
+  spec.summary       = "My Anime Finder gem."
   spec.description   = "This is simple gem that only goes one layer deep into finding a list of anime based on an inputed genre."
   spec.homepage      = "https://github.com/clone18476/CLI_Data_Gem_Project_Cam"
   spec.license       = "MIT"
@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/clone18476/CLI_Data_Gem_Project_Cam"
+  spec.metadata["changelog_uri"] = "https://github.com/clone18476/CLI_Data_Gem_Project_Cam."
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
