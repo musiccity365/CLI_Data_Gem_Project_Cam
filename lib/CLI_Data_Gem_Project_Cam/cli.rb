@@ -6,6 +6,9 @@ module CLI_Data_Gem_Project_Cam
             puts "Welcome to the Anime Finder App!"
             puts "This app is used to help the user find new anime's to watch based on the chosen genre!"
             ask_genre
+            input = gets.strip.to_i
+            validate_input(input)
+            next_move(input)
         end
     
         def ask_genre
@@ -18,6 +21,7 @@ module CLI_Data_Gem_Project_Cam
             genre = validate_input(input)
             api = Scraper.new(genre)
             api.fetch_data
+
         end
     
     
@@ -31,11 +35,15 @@ module CLI_Data_Gem_Project_Cam
 
         def next_move(input)
             puts "Would you like to find another anime? (y/n)"
-            until input == "n"
-
+            input = gets.strip.to_i
+            if input == "n" 
+                ask_genre
+            else 
+                exit
             end
           
         end
         
     end
 end 
+

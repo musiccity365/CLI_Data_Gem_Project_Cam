@@ -16,14 +16,8 @@ module CLI_Data_Gem_Project_Cam
             anime_list.each do |show|
                 puts show["attributes"]["canonicalTitle"].strip
             end
-       
-        end
-        
-        def next_move
 
         end
-
-        
     end
 end 
 
