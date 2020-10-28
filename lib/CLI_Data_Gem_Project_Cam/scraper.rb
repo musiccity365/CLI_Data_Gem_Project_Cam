@@ -12,7 +12,7 @@ module CLI_Data_Gem_Project_Cam
             # response.parsed_response  #might not be needed 
         
             anime_list = response["data"]
-        
+            puts ""
             anime_list.each do |show|
                 puts show["attributes"]["canonicalTitle"].strip
             end
