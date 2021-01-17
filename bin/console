@@ -8,7 +8,9 @@ require "CLI_Data_Gem_Project_Cam"
 
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
-# Pry.start
+# Pry.start 
+# Yup
 
 require "irb"
 IRB.start(__FILE__)
+# Yup
