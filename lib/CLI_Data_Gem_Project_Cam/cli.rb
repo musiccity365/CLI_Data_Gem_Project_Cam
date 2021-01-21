@@ -5,7 +5,6 @@ module CLI_Data_Gem_Project_Cam
         def start
             puts ""
             puts "Welcome to the Anime Finder App!"
-            puts ""
             puts "This app is used to help the user find new anime's to watch based on the chosen genre!"
             ask_genre
             input = "s"
@@ -27,10 +26,11 @@ module CLI_Data_Gem_Project_Cam
         def ask_genre
             puts ""
             puts "This is a list of the available genres to choose from:"
-            puts ""
-            puts "Action, Adventure, Comedy, Drama, Slice of Life, Fantasy, Magic, Supernatural, Horror, Mystery, Psychological, Romance, and Sci-Fi"
+            puts "Action, Adventure, Comedy, Drama, Slice of Life, Fantasy, Magic,"
+            puts "Supernatural, Horror, Mystery, Psychological, Romance, and Sci-Fi."
             puts ""
             puts "Please enter the genre of the anime(s) you would like to discover!"
+            puts ""
             input = gets.strip
             genre = validate_input(input)
             api = Scraper.new(genre)
