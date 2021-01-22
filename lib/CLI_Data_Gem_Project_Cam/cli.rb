@@ -10,7 +10,7 @@ module CLI_Data_Gem_Project_Cam
             input = "s"
             until input == "n"
                 puts ""
-                puts "Would you like to find another list of anime? (y/n)"
+                puts "Thank you for your patience! Would you like to find another list of anime? (y/n)"
                 puts ""
                 input = gets.strip.downcase
                 if input != "n"
@@ -26,12 +26,16 @@ module CLI_Data_Gem_Project_Cam
         def ask_genre
             puts ""
             puts "This is a list of the available genres to choose from:"
+            puts ""
             puts "Action, Adventure, Comedy, Drama, Slice of Life, Fantasy, Magic,"
             puts "Supernatural, Horror, Mystery, Psychological, Romance, and Sci-Fi."
             puts ""
             puts "Please enter the genre of the anime(s) you would like to discover!"
             puts ""
             input = gets.strip
+            puts ""
+            puts "Thank you! Please be patient, as this app has to read through a lot of data!"
+            puts "(If it feels like it's taking too long, try hitting Enter.)"
             genre = validate_input(input)
             api = Scraper.new(genre)
             api.fetch_data
@@ -41,7 +45,7 @@ module CLI_Data_Gem_Project_Cam
         def validate_input(input)
             genre_array = ["action", "adventure", "comedy", "drama", "slice of life", "fantasy", "magic", "supernatural", "horror", "mystery", "psychological", "romance", "sci-fi"]
             until genre_array.include? input.downcase
-                puts "Please enter a valid genre"
+                puts "Please enter a valid genre!"
                 input = gets.strip
             end
             input
