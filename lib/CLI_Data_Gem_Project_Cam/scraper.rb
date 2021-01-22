@@ -1,8 +1,8 @@
-require 'httparty'
+require 'open-uri'
 
 module CLI_Data_Gem_Project_Cam
     class Scraper
-        include HTTParty
+        
         attr_accessor :genre
     
         def initialize(genre)
@@ -11,9 +11,9 @@ module CLI_Data_Gem_Project_Cam
         
         def fetch_data
             url = "https://kitsu.io/api/edge/anime?filter[categories]=#{@genre}"
-            response = HTTParty.get(url)
+            response = Nokogiri::HTML(open(url))
+            binding.pry
             # response.parsed_response  #might not be needed 
-        
             anime_list = response["data"]
             puts ""
             anime_list.each do |show|
