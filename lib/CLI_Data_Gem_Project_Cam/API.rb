@@ -1,5 +1,8 @@
+require 'httparty'
+
 module CLI_Data_Gem_Project_Cam
     class Scraper
+        include HTTParty
         attr_accessor :genre
     
         def initialize(genre)

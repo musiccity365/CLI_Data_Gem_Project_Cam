@@ -33,7 +33,7 @@ module CLI_Data_Gem_Project_Cam
             puts ""
             input = gets.strip
             genre = validate_input(input)
-            api = Scraper.new(genre)
+            api = API.new(genre)
             api.fetch_data
         end
     
