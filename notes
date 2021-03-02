@@ -1,0 +1,64 @@
+1. Identify your object(s) 
+
+I want to build an application that can load lists of anime by genre 
+and for each of them it can generate a index.html that lists all of the items in the collection
+and then it can also generate a "
+
+
+2. Identify your object's responsibilities (my object is only responsible for one thing)
+
+Anime_list
+    - user input 
+SiteGenerator
+    - template (index.html)
+    - responsible for items in it's collection 
+
+3. Design Interface
+
+SiteGenerator.new(AnimeList.all, "views/anime_list/index.html", "_site/anime_list/index.html")
+
+class SiteGenerator
+    def initialize(collection, template, destination) 
+    end 
+end 
+
+
+AnimeListGenerator.new(AnimeList.all, "views/anime_list/index.html", "_site/anime_list/index.html")
+
+class AnimeListGenerator
+    def initialize(template, destination)   
+        @anime_lists = AnimeList.all 
+    end 
+end 
+
+
+------------------------------------------------------------------------------------------------------
+
+This is the functionality that I will likely be using to add OO to my project
+
+$[1,2,3].each do |i| i*i end 
+=> [1, 2, 3]
+$[1,2,3].each do |i| puts i*i end 
+1
+4
+9
+=> [1, 2, 3]
+$squares = [] 
+=> []
+$[1,2,3].each do |i| aquares << i*i end 
+=> [1, 2, 3]
+$squares 
+=> [1, 4, 9] 
+$[1,2,3].collect do |i| i*i end
+=> [1, 4, 9] 
+$[1,2,3].collect do |i| i*i; 8; 4 end
+=> [4, 4, 4]
+     # for each number it's replacing it with 4, 
+     # there is a rule in ruby where the return value for anything is always the last code executed
+$[1,2,3].collect do |i| i*i; 8; 4; false end
+=> [false, false, false]
+
+
+
+
+fdsafdsafdsafd

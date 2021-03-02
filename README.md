@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply type bin/CLI_Data_Gem_Project_Cam 
 
 ## Development
 

@@ -1,6 +1,8 @@
 module CLI_Data_Gem_Project_Cam
-# Yup
+
     class CLI
+        attr_accessor :something
+        @@all = []
 
         def start
             puts ""
@@ -22,7 +24,7 @@ module CLI_Data_Gem_Project_Cam
             puts ""
             exit
         end
-    
+    #yeee
         def ask_genre
             puts ""
             puts "This is a list of the available genres to choose from:"
@@ -33,9 +35,12 @@ module CLI_Data_Gem_Project_Cam
             puts "Please enter the genre of the anime(s) you would like to discover!"
             puts ""
             input = gets.strip
+            @@all << input
             puts ""
             puts "Thank you! Please be patient, as this app has to read through a lot of data!"
             puts "(If it feels like it's taking too long, try hitting Enter.)"
+            
+            binding.pry
             genre = validate_input(input)
             api = Scraper.new(genre)
             api.fetch_data
