@@ -1,32 +1,22 @@
 require "httparty"
+
 module CLI_Data_Gem_Project_Cam
-    class Scraper
+
+    class Shows 
+        attr_accessor :title, :genre
         
-        attr_accessor :genre
         @@all = [] 
 
         def initialize(genre)
-            @genre = genre
-        end
+            @title = title 
+            @genre = genre 
+        end 
 
-        def self.all
-            @@all
-        end
-        
-        def save
-            @@all << self
-        end
-
-        def self.destroy_all
-            @@all.clear
-        end
-        
         def self.create(user_input)
             user_input = self.new(user_input)
             user_input.save
             user_input
         end
-
 
         def fetch_data
             url = "https://kitsu.io/api/edge/anime?filter[categories]=#{@genre}"
@@ -36,7 +26,6 @@ module CLI_Data_Gem_Project_Cam
             anime_list.each do |show|
                 puts show["attributes"]["canonicalTitle"].strip
             end
-
         end
-    end
+    end 
 end 

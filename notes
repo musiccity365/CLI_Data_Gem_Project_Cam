@@ -59,6 +59,11 @@ $[1,2,3].collect do |i| i*i; 8; 4; false end
 => [false, false, false]
 
 
+---------------------------------------------------------------------------------------
 
+- Always want to be discovering new objects 
 
-fdsafdsafdsafd
+- The FUNCTION is the TOP LEVEL thing happening, the function has the name, the OBJECT is really just
+    the data structure that we're passing around.  
+    - OO allows us to CREATE a new kind of thing (like if we mean a person, lets just say a Person, we'll give them 
+        attributes, teach them how to do stuff {say their name})

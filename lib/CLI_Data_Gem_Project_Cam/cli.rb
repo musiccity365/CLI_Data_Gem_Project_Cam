@@ -1,8 +1,6 @@
 module CLI_Data_Gem_Project_Cam
 
-    class CLI
-        attr_accessor :something
-        @@all = []
+    class CLI 
 
         def start
             puts ""
@@ -16,7 +14,7 @@ module CLI_Data_Gem_Project_Cam
                 puts ""
                 input = gets.strip.downcase
                 if input != "n"
-                    next_move(input)
+                    yes_or_no(input)
                 end                  
             end            
             puts ""
@@ -24,7 +22,7 @@ module CLI_Data_Gem_Project_Cam
             puts ""
             exit
         end
-    #yeee
+    
         def ask_genre
             puts ""
             puts "This is a list of the available genres to choose from:"
@@ -35,15 +33,12 @@ module CLI_Data_Gem_Project_Cam
             puts "Please enter the genre of the anime(s) you would like to discover!"
             puts ""
             input = gets.strip
-            @@all << input
             puts ""
             puts "Thank you! Please be patient, as this app has to read through a lot of data!"
             puts "(If it feels like it's taking too long, try hitting Enter.)"
-            
-            binding.pry
             genre = validate_input(input)
-            api = Scraper.new(genre)
-            api.fetch_data
+            shows = Shows.new(genre)
+            shows.fetch_data
         end
     
     
@@ -56,7 +51,7 @@ module CLI_Data_Gem_Project_Cam
             input
         end
 
-        def next_move(input)
+        def yes_or_no(input)
             if input == "y" 
                 ask_genre
             else 
